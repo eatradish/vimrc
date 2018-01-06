@@ -14,6 +14,7 @@ set history=300
 set cino=:0,g0,l0
 set autoread
 set wildmode=longest,list
+map <F8> :TagbarToggle<CR>
 
 " Never recognizes leading zero number as octal number
 set nrformats-=octal
@@ -33,6 +34,8 @@ filetype indent on
 syntax enable
 
 colorscheme heraldish
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 
 " Save all files and run make
 map <F5> :wall<CR>:make<CR>
@@ -44,7 +47,7 @@ map <F6> :!ctags -R --fields=+iaS --extra=+q --append . /usr/include<CR>
 map <F7> :cp<CR>
 
 " Next error after make
-map <F8> :cn<CR>
+" map <F8> :cn<CR>
 
 " Jump to window
 map <C-j> <C-w>j
